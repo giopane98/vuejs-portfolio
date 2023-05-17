@@ -1,8 +1,22 @@
-<script setup>
+<script>
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
 import EnjoyButton from './components/Enjoy-button.vue';
 import Gallery from './components/Gallery.vue';
+
+import worksData from './assets/works.json';
+
+export default {
+  data() {
+    return {
+      works: worksData,
+    };
+  },
+   components: {
+    Gallery,
+  }
+};
+
 </script>
 
 <template>
@@ -15,23 +29,20 @@ import Gallery from './components/Gallery.vue';
   </header>
 
   <main>
-    <Gallery 
-    title="Prima"
-    abstract="Questa sarà la mia prima foto"
-    imageUrl="/images/neom-4q87Z96NBYg-unsplash.jpg"
-    />
-    <Gallery 
-    title="Seconda" 
-    abstract="Questa sarà la mia seconda foto"
-    imageUrl="/images/neom-dMSYsXdwl9M-unsplash.jpg"
-    />
-    <Gallery 
-    title="Terza" 
-    abstract="Questa sarà la mia terza foto"
-    imageUrl="/images/neom-epQdtCvBrc4-unsplash.jpg"
-    />
     <EnjoyButton />
   </main>
+
+
+    <div id="works">
+        <div v-for="work in works" :key="work.id">
+          <Gallery
+          :title="work.title"
+          :abstract="work.description"
+          :imageUrl="work.image_thumbnail"
+          />
+        </div>
+      </div>
+
 </template>
 
 <style scoped>
