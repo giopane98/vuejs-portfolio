@@ -1,16 +1,21 @@
 <script>
-import Gallery from './components/Gallery.vue';
 
-import worksData from './assets/works.json';
+import Header from './components/Header.vue'
+import Gallery from './components/Gallery.vue'
+import SocialLink from './components/SocialLink.vue'
+
+import contentsData from './assets/contents.json'
 
 export default {
   data() {
     return {
-      works: worksData,
+      contents: contentsData,
     };
   },
    components: {
+    Header,
     Gallery,
+    SocialLink,
   }
 };
 
@@ -18,18 +23,29 @@ export default {
 
 <template>
   <main>
-  </main>
-
-
-    <div id="works">
-        <div v-for="work in works" :key="work.id">
-          <Gallery
-          :title="work.title"
-          :abstract="work.description"
-          :imageUrl="work.image_thumbnail"
-          />
+    <Header/>
+        <div id="works" class="row">
+          <div class="col-12 col-md-6" v-for="work in contents.works" :key="work.id">
+            <Gallery
+            :title="work.title"
+            :abstract="work.description"
+            :imageUrl="work.image_thumbnail"
+            />
+          </div>
         </div>
+
+      <div id="social-links" class="row">
+        <ul>
+           <li v-for="link in contents.social_Links" :key="link.id">
+              <SocialLink 
+                :id="link.id"
+                :name="link.name"
+                :url="link.url"
+              />
+            </li>
+        </ul>
       </div>
+  </main>
 
 </template>
 

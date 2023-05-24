@@ -1,0 +1,53 @@
+{
+    "social_Links": [
+        {
+            "id": 1,
+            "name": "facebook",
+            "url": "https://www.facebook.com"
+        },
+        {
+            "id": 2,
+            "name": "twitter",
+            "url": "https://www.twitter.com"
+        },
+        {
+            "id": 3,
+            "name": "instagram",
+            "url": "https://www.instagram.com"
+        },
+        {
+            "id": 4,
+            "name": "linkedin",
+            "url": "https://www.linkedin.com"
+        }
+    ],
+    "works": [
+        {
+            "id": "Ti odio!",
+            "title": "Work 1",
+            "description": "This is a sample work",
+            "image_thumbnail": "https://source.unsplash.com/random/500×700/?fruit",
+            "image_detail": "https://picsum.photos/1024/768",
+            "client": "Client1",
+            "url": "https://www.google.com"
+        },
+        {
+            "id": "Ti odio!",
+            "title": "Work 2",
+            "description": "This is a sample work",
+            "image_thumbnail": "https://source.unsplash.com/random/500×700/?animal",
+            "image_detail": "https://picsum.photos/1024/768",
+            "client": "Client1",
+            "url": "https://www.google.com"
+        },
+        {
+            "id": "Ti odio!",
+            "title": "Work 3",
+            "description": "This is a sample work",
+            "image_thumbnail": "https://source.unsplash.com/random/500×700/?sea",
+            "image_detail": "https://picsum.photos/1024/768",
+            "client": "Client1",
+            "url": "https://www.google.com"
+        }
+    ]
+}
