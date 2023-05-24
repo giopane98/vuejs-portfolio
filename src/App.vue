@@ -1,7 +1,4 @@
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-import EnjoyButton from './components/Enjoy-button.vue';
 import Gallery from './components/Gallery.vue';
 
 import worksData from './assets/works.json';
@@ -20,16 +17,7 @@ export default {
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="Ciao a tutti!" />
-    </div>
-  </header>
-
   <main>
-    <EnjoyButton />
   </main>
 
 
